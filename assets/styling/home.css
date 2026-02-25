@@ -1,0 +1,12 @@
+h1 {
+    font-size: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#backimarge {
+    margin: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
