@@ -27,6 +27,19 @@
     background-color: rgb(37, 37, 37);
     height: 1000px;
 }
+.Second_box h2 {
+    color: #ffffff;
+    font-size: 80px;
+    margin-top: 20px;
+    padding: 10px;
+    border-top: 1px solid #ffffff;
+    border-bottom: 1px solid #ffffff;
+}
+.Second_box ul {
+    list-style: circle;      /* ○ 空白丸 */
+    margin-top: -10px;
+    font-size: 30px;
+}
 .introduction-container {
     display: flex;
     align-items: center;
@@ -45,11 +58,10 @@
     object-fit: cover;
 }
 
-.intro-text h2 {
-    font-size: 28px;
+.intro-text h3 {
+    font-size: 40px;
     margin-bottom: 10px;
     font-style: italic;
-
 }
 
 .intro-text p {

@@ -23,12 +23,18 @@ pub fn Home() -> Element {
          }
         div {
             class:"Second_box" ,
+            h2 { "このサイトの構成" }
+            ul { 
+                li { "Home - 今の場所" }
+                li { "About - サイトに使用した技術" }
+                li { "Blog - Coming soon" }                
+             }
             div {
                 class: "introduction-container",
                 img { src: MYICON_WEBP, class: "intro-icon" }
                 div {
                     class: "intro-text",
-                    h2 {"IWA" }
+                    h3 {"IWA" }
                     p { "職業：エンジニア" }
                     p { "趣味：Rust" }
                     p { "一言：よろしくお願いします！" }
