@@ -2,8 +2,8 @@ use crate::Route;
 use dioxus::{html::embed::width, prelude::*};
 
 const NAVBAR_CSS: Asset = asset!("/assets/styling/navbar.css");
-const MYICON_WEBP: Asset = asset!("assets/image/myicon.webp");
-const GITHUBICON_WEBP: Asset = asset!("assets/image/GitHub_Invertocat_White.svg");
+const MYICON_WEBP: Asset = asset!("/assets/image/myicon.webp");
+const GITHUBICON_WEBP: Asset = asset!("/assets/image/GitHub_Invertocat_White.svg");
 /// The Navbar component that will be rendered on all pages of our app since every page is under the layout.
 ///
 ///
@@ -17,7 +17,7 @@ pub fn Navbar() -> Element {
             id: "navbar",
             img { src: MYICON_WEBP, id: "myicon",}
             a { 
-                href: "https://dioxuslabs.com/learn/0.7/",
+                href: "https://github.com/iwawakoiwa",
                 img { src: GITHUBICON_WEBP,id:"myicon",style:"margin-top:0px; margin-left: 10px;" }
             }
             Link {
@@ -29,8 +29,8 @@ pub fn Navbar() -> Element {
                 "Blog"
             }
             Link {
-                to: Route::Introduction {},
-                "self-introduction"
+                to: Route::About {},
+                "About"
             }
         }
 

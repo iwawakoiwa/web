@@ -1,0 +1,33 @@
+.about {
+    background-color: #141414;
+    color: white;
+    min-height: 100vh;
+    padding: 80px 40px 40px 40px; /* 上を80pxに */
+}
+.about h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+.about h2 {
+    margin-top: 5px;
+    padding-top: 5px;
+    border-top: 2px solid #91a4d2;
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+.about ul{
+    list-style: circle ;
+    margin-left: 10px;
+}
+.about a {
+    color: #c2c9da;
+}
+.about a:hover {
+    color: #1e356b;
+}
+.Annotation {
+    font-size: 8px;
+    margin-top: -10px;
+    letter-spacing: 1px;
+    float: right;
+}

@@ -4,7 +4,7 @@
 use dioxus::prelude::*;
 
 use components::Hero;
-use views::{Blog, Home, Navbar,Introduction,BlogList};
+use views::{Blog, Home, Navbar,About,BlogList};
 
 /// Define a components module that contains all shared components for our app.
 mod components;
@@ -34,8 +34,8 @@ enum Route {
         Blog { id: i32 },
         #[route("/blog")]
         BlogList {},        // 一覧ページ
-        #[route("/introduction")]
-        Introduction {},
+        #[route("/about")]
+        About {},
 }
 
 // We can import assets in dioxus with the `asset!` macro. This macro takes a path to an asset relative to the crate root.
