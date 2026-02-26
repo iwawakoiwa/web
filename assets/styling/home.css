@@ -1,12 +1,50 @@
-h1 {
-    font-size: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+#main_text {
+    color: #ffffff;
+    font-size: 40px;
+    text-align: center;
 }
-#backimarge {
-    margin: 20px;
+#buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    font-size: 20px;
+    border-top: #91a4d2 2px solid;
+    padding: 10px;
+}
+.button {
+    border-left: #ffffff 3px solid;
+    border-right: #ffffff 3px solid;
+    padding: 10px 20px;
+    font-size: 30px;
+    display: inline-block;
+    margin-top: 10px;
+}
+.button:hover {
+    background-color: #1f1f1f;
+    cursor: pointer;
+}
+.introduction-container {
     display: flex;
     align-items: center;
-    justify-content: center;
+    gap: 40px;
+    margin: 50px auto;
+    width: 80%;
+    border-radius: 2px solid #91a4d2;
+    padding: 20px;
+    background-color: #1f1f1f;
+}
+.intro-icon {
+    width: 70px;
+    height: auto;
+    object-fit: cover;
+}
+
+.intro-text h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.intro-text p {
+    font-size: 16px;
+    line-height: 1.8;
 }

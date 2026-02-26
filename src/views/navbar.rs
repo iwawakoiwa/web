@@ -1,8 +1,9 @@
 use crate::Route;
-use dioxus::prelude::*;
+use dioxus::{html::embed::width, prelude::*};
 
 const NAVBAR_CSS: Asset = asset!("/assets/styling/navbar.css");
-
+const MYICON_WEBP: Asset = asset!("assets/image/myicon.webp");
+const GITHUBICON_WEBP: Asset = asset!("assets/image/GitHub_Invertocat_White.svg");
 /// The Navbar component that will be rendered on all pages of our app since every page is under the layout.
 ///
 ///
@@ -12,17 +13,24 @@ const NAVBAR_CSS: Asset = asset!("/assets/styling/navbar.css");
 pub fn Navbar() -> Element {
     rsx! {
         document::Link { rel: "stylesheet", href: NAVBAR_CSS }
-        
         div {
             id: "navbar",
-            h1 {"IWAのサーバーへようこそ"}
-            Link {
-                to: Route::Home {},
-                "Home"
+            img { src: MYICON_WEBP, id: "myicon",}
+            a { 
+                href: "https://dioxuslabs.com/learn/0.7/",
+                img { src: GITHUBICON_WEBP,id:"myicon",style:"margin-top:0px; margin-left: 10px;" }
             }
             Link {
-                to: Route::Blog { id: 1 },
+                to: Route::Home {},
+                "IWAのサーバーへようこそ"
+            }
+            Link {
+                to: Route::BlogList  {},
                 "Blog"
+            }
+            Link {
+                to: Route::Introduction {},
+                "self-introduction"
             }
         }
 

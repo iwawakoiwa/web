@@ -1,9 +1,10 @@
 // The dioxus prelude contains a ton of common items used in dioxus apps. It's a good idea to import wherever you
 // need dioxus
+//http://127.0.0.1:8080
 use dioxus::prelude::*;
 
 use components::Hero;
-use views::{Blog, Home, Navbar};
+use views::{Blog, Home, Navbar,Introduction,BlogList};
 
 /// Define a components module that contains all shared components for our app.
 mod components;
@@ -31,6 +32,10 @@ enum Route {
         // Fields of the route variant will be passed to the component as props. In this case, the blog component must accept
         // an `id` prop of type `i32`.
         Blog { id: i32 },
+        #[route("/blog")]
+        BlogList {},        // 一覧ページ
+        #[route("/introduction")]
+        Introduction {},
 }
 
 // We can import assets in dioxus with the `asset!` macro. This macro takes a path to an asset relative to the crate root.

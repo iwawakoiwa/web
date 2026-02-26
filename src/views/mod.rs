@@ -16,3 +16,9 @@ pub use blog::Blog;
 
 mod navbar;
 pub use navbar::Navbar;
+
+mod introduction;
+pub use introduction::Introduction;
+
+mod blog_list;
+pub use blog_list::BlogList;
