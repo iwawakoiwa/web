@@ -1,6 +1,5 @@
 use dioxus::prelude::*;
-use crate::Route;
-use crate::components::Slideshow;
+use crate::components::{Footer_component, Slideshow};
 
 const HOME_CSS: Asset = asset!("/assets/styling/home.css");
 const MYICON_WEBP: Asset = asset!("assets/image/myicon.webp");
@@ -36,6 +35,6 @@ pub fn Home() -> Element {
                 }
             }
          }
-
+        Footer_component {}
     }
 }

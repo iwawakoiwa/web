@@ -1,7 +1,8 @@
 use dioxus::prelude::*;
 
+use crate::components::Footer_component;
+
 const ABOUT_CSS: Asset = asset!("assets/styling/about.css");
-const ICON_SVG: Asset = asset!("assets/image/GitHub_Invertocat_White.svg");
 
 #[component]
 pub fn About() -> Element {
@@ -37,6 +38,8 @@ pub fn About() -> Element {
                     p { "セルフホスティング" }
                 }
             }
+        
          }
+        Footer_component {  }   
     }
 }

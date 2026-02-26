@@ -7,3 +7,6 @@ pub use hero::Hero;
 
 mod slideshow;
 pub use slideshow::Slideshow;
+
+mod footer_component;
+pub use footer_component::Footer_component;
