@@ -1,39 +1,45 @@
-#main_text {
-    color: #ffffff;
-    font-size: 40px;
-    text-align: center;
-}
-#buttons {
+.main_text {
     display: flex;
-    justify-content: center;
-    margin-top: 20px;
-    font-size: 20px;
-    border-top: #91a4d2 2px solid;
-    padding: 10px;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    background-color:#141414;
+    height: auto;
 }
-.button {
-    border-left: #ffffff 3px solid;
-    border-right: #ffffff 3px solid;
-    padding: 10px 20px;
+.titles {
+    color: #ffffff;
     font-size: 30px;
-    display: inline-block;
-    margin-top: 10px;
+    float: left;
+    margin: 30px;
+    margin-top: 90px;
 }
-.button:hover {
-    background-color: #1f1f1f;
-    cursor: pointer;
+.titles p {
+    float: right; 
+    font-size: 16px;
+    font-style: italic;
+}
+.Second_box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    background-color: rgb(37, 37, 37);
+    height: 1000px;
 }
 .introduction-container {
     display: flex;
     align-items: center;
-    gap: 40px;
+    gap: 40px; 
     margin: 50px auto;
     width: 80%;
-    border-radius: 2px solid #91a4d2;
     padding: 20px;
     background-color: #1f1f1f;
+    border-top: white 2px solid;
+    border-bottom: white 2px solid;
 }
 .intro-icon {
+    position: relative;  /* 追加 */
     width: 70px;
     height: auto;
     object-fit: cover;
@@ -42,9 +48,14 @@
 .intro-text h2 {
     font-size: 28px;
     margin-bottom: 10px;
+    font-style: italic;
+
 }
 
 .intro-text p {
+    float: left;
     font-size: 16px;
     line-height: 1.8;
+    margin-left: 10px;
 }
+

@@ -4,3 +4,6 @@
 
 mod hero;
 pub use hero::Hero;
+
+mod slideshow;
+pub use slideshow::Slideshow;

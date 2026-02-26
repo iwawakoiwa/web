@@ -22,7 +22,7 @@ pub fn Navbar() -> Element {
             }
             Link {
                 to: Route::Home {},
-                "IWAのサーバーへようこそ"
+                "Home"
             }
             Link {
                 to: Route::BlogList  {},

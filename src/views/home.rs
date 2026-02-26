@@ -1,5 +1,6 @@
 use dioxus::prelude::*;
 use crate::Route;
+use crate::components::Slideshow;
 
 const HOME_CSS: Asset = asset!("/assets/styling/home.css");
 const MYICON_WEBP: Asset = asset!("assets/image/myicon.webp");
@@ -12,29 +13,29 @@ pub fn Home() -> Element {
         document::Link { rel: "stylesheet", href: HOME_CSS }
         //img { src: BACKIMAGE_WEBP, id: "backimarge"}
         div { 
-            id: "main_text",
-            h1 {"Welcome to the IWA page"}
-            h2 {"IWAのホームページへようこそ"  }
-         }
-        //  div {
-        //     id:"buttons" ,
-        //     div {                   
-        //         Link { to: Route::Home {},class:"button", "Self introduction" }
-        //         br {}    
-        //         Link { to: Route::Blog {id:0},class:"button",  "Awesome Dioxus" }
-        //     }
-        //   }
-        div {
-            class: "introduction-container",
-            img { src: MYICON_WEBP, class: "intro-icon" }
-            div {
-                class: "intro-text",
-                h2 { "IWA" }
-                p { "職業：エンジニア" }
-                p { "趣味：Rust" }
-                p { "一言：よろしくお願いします！" }
+            class: "main_text",
+            div { 
+                class:"titles", 
+                h1 {"Welcome to the IWA page"}
+                h2 {"IWAのホームページへようこそ"  }
+                p {"これがホームページ、最も完璧です" }
             }
-        }
+            Slideshow {}  // これだけ！
+         }
+        div {
+            class:"Second_box" ,
+            div {
+                class: "introduction-container",
+                img { src: MYICON_WEBP, class: "intro-icon" }
+                div {
+                    class: "intro-text",
+                    h2 {"IWA" }
+                    p { "職業：エンジニア" }
+                    p { "趣味：Rust" }
+                    p { "一言：よろしくお願いします！" }
+                }
+            }
+         }
 
     }
 }
