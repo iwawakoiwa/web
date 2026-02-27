@@ -7,6 +7,12 @@
     width: 100%;
 }
 
+.slideshow h5 {
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
 .slide-image {
     width: 50%;
     height: auto;

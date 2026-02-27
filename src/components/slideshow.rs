@@ -31,6 +31,7 @@ pub fn Slideshow() -> Element {  // 大文字始まりに
     rsx! {
         document::Link { rel: "stylesheet", href: SLIDESHOW_CSS }
         div { class: "slideshow",
+            h5 {"気に入った写真たち"}
             img { src: images[current()], class: "slide-image" }  // ima → img
             div { class: "slide-buttons",  // クラス名修正
                 button {

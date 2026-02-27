@@ -1,4 +1,4 @@
-use crate::Route;
+use crate::{Route, components::Footer_component};
 use dioxus::{html::meta::content, prelude::*};
 use crate::views::markdown::to_html;
 
@@ -23,28 +23,26 @@ pub fn Blog(id: i32) -> Element {
         document::Link { rel: "stylesheet", href: BLOG_CSS }
 
         div {
-            id: "blog",
-            // Content
-            h1 { "This is blog #{id}!" }
+            class: "blog",
+            p { "This is blog #{id}!" }
             div { dangerous_inner_html: "{html}" }
-            // Navigation links
-            // The `Link` component lets us link to other routes inside our app. It takes a `to` prop of type `Route` and
-            // any number of child nodes.
             div {
                 class:"transition",
-                Link {
-                    // The `to` prop is the route that the link should navigate to. We can use the `Route` enum to link to the
-                    // blog page with the id of -1. Since we are using an enum instead of a string, all of the routes will be checked
-                    // at compile time to make sure they are valid.
-                    to: Route::Blog { id: id - 1 },
-                    "Previous"
+                a {
+                    Link {
+                        to: Route::Blog { id: id - 1 },
+                        "Previous"
+                    }
                 }
                 span { " <---> " }
-                Link {
-                    to: Route::Blog { id: id + 1 },
-                    "Next"
+                a {  
+                    Link {
+                        to: Route::Blog { id: id + 1 },
+                        "Next"
+                    }
                 }
             }
+            Footer_component {  }
         }
     }
 }

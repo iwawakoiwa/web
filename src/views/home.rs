@@ -16,7 +16,9 @@ pub fn Home() -> Element {
                 class:"titles", 
                 h1 {"Welcome to the IWA page"}
                 h2 {"IWAのホームページへようこそ"  }
-                p {"これがホームページ、最も完璧です" }
+                h4 {"これがホームページ、最も完璧です" }
+                p {"A personal site about technology, projects, and ideas."}
+                p {"技術やプロジェクト、アイデアについて発信する個人サイトです。"}
             }
             Slideshow {}  // これだけ！
          }
@@ -24,9 +26,9 @@ pub fn Home() -> Element {
             class:"Second_box" ,
             h2 { "このサイトの構成" }
             ul { 
-                li { "Home - 今の場所" }
+                li { "Home - サイトの入口" }
                 li { "About - サイトの説明" }
-                li { "Blog - Coming soon" }                
+                li { "Blog - 技術記事・制作記録（準備中）" }         
              }
          }
         Footer_component {}
