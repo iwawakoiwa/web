@@ -2,6 +2,7 @@ use dioxus::{document::MetaProps, prelude::*};
 use crate::components::{Footer_component, Slideshow, other_introduction};
 
 const HOME_CSS: Asset = asset!("/assets/styling/home.css");
+const OGP: Asset = asset!("/assets/image/ogp.webp");
 //const BACKIMAGE_WEBP: Asset = asset!("/assets/image/backimage.webp");
 
 /// The Home page component that will be rendered when the current route is `[Route::Home]`
