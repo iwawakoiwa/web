@@ -67,11 +67,6 @@ fn App() -> Element {
             rel: "stylesheet", 
             href: "https://fonts.googleapis.com/css2?family=BIZ+UDPGothic&display=swap" 
         }
-        document::Meta { property: "og:title", content: "IWA Service" }
-        //document::Meta { property: "og:description", content: "サイトの説明" }
-        //document::Meta { property: "og:image", content: "https://iwaservice.uk/assets/image/preview.png" }
-        document::Meta { property: "og:url", content: "https://iwaservice.uk" }
-        document::Meta { property: "og:type", content: "website" }        
         // The router component renders the route enum we defined above. It will handle synchronization of the URL and render
         // the layouts and components for the active route.
         Router::<Route> {}
