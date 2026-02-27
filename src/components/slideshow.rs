@@ -1,7 +1,7 @@
 use dioxus::prelude::*;
 
 const IMAGE1_WEBP: Asset = asset!("/assets/image/image1.webp");
-const IMAGE2_WEBP: Asset = asset!("/assets/image/image2.webp");
+//const IMAGE2_WEBP: Asset = asset!("/assets/image/image2.webp");
 const IMAGE3_WEBP: Asset = asset!("/assets/image/image3.webp");
 const IMAGE4_WEBP: Asset = asset!("/assets/image/image4.webp");
 const IMAGE5_WEBP: Asset = asset!("/assets/image/image5.webp");
@@ -11,7 +11,7 @@ const SLIDESHOW_CSS: Asset = asset!("/assets/styling/slideshow.css");
 #[component]
 pub fn Slideshow() -> Element {  // 大文字始まりに
     let mut current = use_signal(|| 0usize);
-    let images = vec![IMAGE1_WEBP, IMAGE2_WEBP, IMAGE3_WEBP, IMAGE4_WEBP, IMAGE5_WEBP,IMAGE6_WEBP];
+    let images = vec![IMAGE1_WEBP, IMAGE3_WEBP, IMAGE4_WEBP, IMAGE5_WEBP,IMAGE6_WEBP];
 
     let len = images.len(); // define it before use_effect
     let mut is_playing = use_signal(|| true);
