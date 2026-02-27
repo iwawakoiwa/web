@@ -14,7 +14,7 @@ pub fn Blog(id: i32) -> Element {
         1 => include_str!("../../assets/markdown/1.md"),
         2 => include_str!("../../assets/markdown/2.md"),        
         3 => include_str!("../../assets/markdown/3.md"),
-        _=> "#記事が見つかりません"        
+        _=> include_str!("../../assets/markdown/not_found.md"),       
     };
 
     let html = to_html(mds);
@@ -26,22 +26,24 @@ pub fn Blog(id: i32) -> Element {
             id: "blog",
             // Content
             h1 { "This is blog #{id}!" }
-            p { "In blog #{id}, we show how the Dioxus router works and how URL parameters can be passed as props to our route components." }
             div { dangerous_inner_html: "{html}" }
             // Navigation links
             // The `Link` component lets us link to other routes inside our app. It takes a `to` prop of type `Route` and
             // any number of child nodes.
-            Link {
-                // The `to` prop is the route that the link should navigate to. We can use the `Route` enum to link to the
-                // blog page with the id of -1. Since we are using an enum instead of a string, all of the routes will be checked
-                // at compile time to make sure they are valid.
-                to: Route::Blog { id: id - 1 },
-                "Previous"
-            }
-            span { " <---> " }
-            Link {
-                to: Route::Blog { id: id + 1 },
-                "Next"
+            div {
+                class:"transition",
+                Link {
+                    // The `to` prop is the route that the link should navigate to. We can use the `Route` enum to link to the
+                    // blog page with the id of -1. Since we are using an enum instead of a string, all of the routes will be checked
+                    // at compile time to make sure they are valid.
+                    to: Route::Blog { id: id - 1 },
+                    "Previous"
+                }
+                span { " <---> " }
+                Link {
+                    to: Route::Blog { id: id + 1 },
+                    "Next"
+                }
             }
         }
     }
