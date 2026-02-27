@@ -23,3 +23,5 @@ pub use about::About;
 mod blog_list;
 pub use blog_list::BlogList;
 
+pub mod markdown;
+

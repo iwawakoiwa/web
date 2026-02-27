@@ -1,5 +1,6 @@
 use crate::Route;
-use dioxus::prelude::*;
+use dioxus::{html::meta::content, prelude::*};
+use crate::views::markdown::to_html;
 
 const BLOG_CSS: Asset = asset!("/assets/styling/blog.css");
 
@@ -9,16 +10,24 @@ const BLOG_CSS: Asset = asset!("/assets/styling/blog.css");
 /// re-run and the rendered HTML will be updated.
 #[component]
 pub fn Blog(id: i32) -> Element {
+    let mds = match id {
+        1 => include_str!("../../assets/markdown/1.md"),
+        2 => include_str!("../../assets/markdown/2.md"),        
+        3 => include_str!("../../assets/markdown/3.md"),
+        _=> "#記事が見つかりません"        
+    };
+
+    let html = to_html(mds);
+
     rsx! {
         document::Link { rel: "stylesheet", href: BLOG_CSS }
 
         div {
             id: "blog",
-
             // Content
             h1 { "This is blog #{id}!" }
             p { "In blog #{id}, we show how the Dioxus router works and how URL parameters can be passed as props to our route components." }
-
+            div { dangerous_inner_html: "{html}" }
             // Navigation links
             // The `Link` component lets us link to other routes inside our app. It takes a `to` prop of type `Route` and
             // any number of child nodes.

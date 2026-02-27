@@ -25,7 +25,7 @@ pub fn Navbar() -> Element {
                 "Home"
             }
             Link {
-                to: Route::BlogList  {},
+                to: Route::BlogList {  } ,
                 "Blog"
             }
             Link {

@@ -40,34 +40,4 @@
     margin-top: -10px;
     font-size: 30px;
 }
-.introduction-container {
-    display: flex;
-    align-items: center;
-    gap: 40px; 
-    margin: 50px auto;
-    width: 80%;
-    padding: 20px;
-    background-color: #1f1f1f;
-    border-top: white 2px solid;
-    border-bottom: white 2px solid;
-}
-.intro-icon {
-    position: relative;  /* 追加 */
-    width: 70px;
-    height: auto;
-    object-fit: cover;
-}
-
-.intro-text h3 {
-    font-size: 40px;
-    margin-bottom: 10px;
-    font-style: italic;
-}
-
-.intro-text p {
-    float: left;
-    font-size: 16px;
-    line-height: 1.8;
-    margin-left: 10px;
-}
 

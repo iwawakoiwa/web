@@ -10,3 +10,6 @@ pub use slideshow::Slideshow;
 
 mod footer_component;
 pub use footer_component::Footer_component;
+
+mod introduction;
+pub use introduction::introduction as other_introduction;

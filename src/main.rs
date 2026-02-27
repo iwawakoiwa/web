@@ -3,7 +3,6 @@
 //http://127.0.0.1:8080
 use dioxus::prelude::*;
 
-use components::Hero;
 use views::{Blog, Home, Navbar,About,BlogList};
 
 /// Define a components module that contains all shared components for our app.

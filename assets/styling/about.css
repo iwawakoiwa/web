@@ -21,13 +21,21 @@
 }
 .about a {
     color: #c2c9da;
+    margin-left: 10px;
 }
 .about a:hover {
     color: #1e356b;
 }
 .Annotation {
-    font-size: 8px;
+    font-size: 12px;
     margin-top: -10px;
     letter-spacing: 1px;
     float: right;
+}
+.about h3 {
+    font-size: 24px;
+    margin: 10px;
+}
+.about p {
+    margin-left: 10px;
 }
