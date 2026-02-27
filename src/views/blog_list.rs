@@ -1,22 +1,36 @@
 use dioxus::prelude::*;
-use crate::Route;
-use crate::views::markdown::to_html;
+use crate::{Route, components::Footer_component};
 
 #[component]
 pub fn BlogList() -> Element {
-    let content = "# こんにちは\nこれは**Rust**製ブログです！";
-
-    // MarkdownをHTMLに変換
-    let html = to_html(content);
+    let articles = vec![
+        (1, "最初の記事"),
+        (2, "2つ目の記事"),
+        (3, "3つ目の記事"),
+    ];
+    const BLOGLIST_CSS: Asset = asset!("assets/styling/bloglist.css");
 
     rsx! {
-        h1 { "ブログ一覧" }
-        Link { to: Route::Blog { id: 0 }, "記事1" }
-        Link { to: Route::Blog { id: 1 }, "記事2" }
-        div {
-            id: "blog",
-            // 変換したHTMLをそのまま表示
-            div { dangerous_inner_html: "{html}" }
+        document::Link { rel: "stylesheet", href: BLOGLIST_CSS }        
+        div {  
+            class:"bloglist",
+            h1 { "ブログ一覧" }
+            ul {
+                for (id, title) in articles {
+                    div {
+                        class:"linkbox",                        
+                        li {
+                            a {
+                                Link {
+                                    to: Route::Blog { id },
+                                    "{title}"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
         }
+        Footer_component {  }
     }
 }
