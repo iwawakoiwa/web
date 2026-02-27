@@ -1,4 +1,4 @@
-use dioxus::prelude::*;
+use dioxus::{document::MetaProps, prelude::*};
 use crate::components::{Footer_component, Slideshow, other_introduction};
 
 const HOME_CSS: Asset = asset!("/assets/styling/home.css");
